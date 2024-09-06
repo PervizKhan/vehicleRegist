@@ -1,4 +1,4 @@
-import MenuItem from "./menuItem";
+import MenuItem from "./MenuItem";
 const Sidebar = () => {
   const menuItems = [
     { iconSrc: "./dashboard.svg", label: "Dashboard" },
