@@ -1,6 +1,6 @@
 const Navbar = () => {
   return (
-    <nav className='flex items-center justify-between p-[22.5px] border-b '>
+    <nav className='flex items-center justify-between p-[22.5px] border-b border-l'>
       {/* Left Icon */}
       <div className='flex-shrink-0'>
         <img

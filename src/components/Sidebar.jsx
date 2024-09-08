@@ -18,7 +18,7 @@ const Sidebar = () => {
       <div className='w-full h-px bg-gray-300'></div>
 
       {/* sidebar body */}
-      <div className='flex flex-col pl-12 pt-12 space-y-4'>
+      <div className='flex flex-col pl-4 md:pl-6 lg:pl-12 pt-12 space-y-4'>
         {/* use MenuItem here using map */}
         {menuItems.map((item, index) => (
           <MenuItem key={index} iconSrc={item.iconSrc} label={item.label} />

@@ -1,36 +1,54 @@
-.step-item {
-  @apply relative flex flex-col justify-center items-center w-48;
-}
 
-.step-item:not(:first-child):before {
-  @apply content-[''] bg-white absolute w-full h-[4px] right-2/4 top-1/3 -translate-y-2/4;
+.stepper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
 }
 
 .step {
-  @apply w-10 h-10 flex items-center justify-center z-10 relative bg-white rounded-full font-semibold text-black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.active .step {
-  @apply bg-[#242E69] text-white;
+.step-number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #cecece;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-.complete .step {
-  @apply bg-[#242E69] text-white;
+.step-name {
+  font-size: 14px;
 }
 
-.complete p {
-  @apply text-[#242E69];
+.active .step-number {
+  background-color: #242E69;
+  color: #fff;
 }
 
-.complete:not(:first-child):before,
-.active:not(:first-child):before {
-  @apply bg-[#242E69];
+.complete .step-number {
+  background-color: #242E69;
+  color: #fff;
 }
 
-.btn {
-  @apply bg-blue-500 text-white px-4 py-2 rounded cursor-pointer;
+.progress-bar {
+  position: absolute;
+  top: 15%;
+  right: 0;
+  left: 0;
+  height: 4px;
+  background-color: white;
 }
 
-.btn:disabled {
-  @apply bg-gray-300 cursor-not-allowed;
+.progress {
+  height: 100%;
+  background-color: #242E69;
+  transition: 0.2s ease;
 }

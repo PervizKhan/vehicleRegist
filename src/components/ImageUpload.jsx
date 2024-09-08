@@ -3,13 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   addImageMetadata,
   removeImageMetadata,
-} from "../features/vehicle/stepOneSlice";
+} from "../redux/slices/multiStepFormSlice";
 
 const MAX_FILES = 6;
 
 const ImageUpload = () => {
   const dispatch = useDispatch();
-  const imageMetadata = useSelector((state) => state.stepOne.images); // Metadata only
+  const imageMetadata = useSelector((state) => state.vehicle.stepOne.images); // Metadata only
   const [files, setFiles] = useState([]); // Local state for File objects
   const [dragging, setDragging] = useState(false);
 

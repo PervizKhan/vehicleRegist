@@ -14,8 +14,20 @@ export const fieldsConfig = [
     options: ["Corolla", "Civic"],
     required: true,
   },
-  { name: "type", label: "Type", type: "select", options: ["type1", "type2"], required: true },
-  { name: "year", label: "Year", type: "select", options: ["2000","2001"], required: true },
+  {
+    name: "type",
+    label: "Type",
+    type: "select",
+    options: ["type1", "type2"],
+    required: true,
+  },
+  {
+    name: "year",
+    label: "Year",
+    type: "select",
+    options: ["2000", "2001"],
+    required: true,
+  },
   {
     name: "registrationNo",
     label: "Registration No",
@@ -45,8 +57,19 @@ export const fieldsConfig = [
     options: ["Petrol", "Diesel"],
     required: true,
   },
-  { name: "odometer", label: "Odometer (KMPH)", type: "text", required: true },
-  { name: "passengers", label: "Passengers", type: "select",options: [4,5,6], required: true },
+  {
+    name: "odometer",
+    label: "Odometer (KMPH)",
+    type: "number",
+    required: true,
+  },
+  {
+    name: "passengers",
+    label: "Passengers",
+    type: "select",
+    options: [4, 5, 6],
+    required: true,
+  },
   {
     name: "country",
     label: "Country",
@@ -58,7 +81,7 @@ export const fieldsConfig = [
     name: "city",
     label: "City",
     type: "select",
-    options: ["Lahore", "Peshawar","Delhi"],
+    options: ["Lahore", "Peshawar", "Delhi"],
     required: true,
   },
 ];

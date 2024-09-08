@@ -1,4 +1,8 @@
+import { useStepHandlers } from "../../utils/stepHandlers"; // Ensure correct path
+
 const StepFive = () => {
+  const { handleNext, handleBack } = useStepHandlers(); // Import navigation handlers
+
   return (
     <div className='grid grid-cols-2 bg-white px-6 py-10'>
       <div className='flex flex-col space-y-10'>
@@ -20,8 +24,8 @@ const StepFive = () => {
           <img src='./cars-damage.svg' alt='' />
         </div>
       </div>
-  {/*  */}
-      <div className='flex flex-col h-full border-l-2 '>
+
+      <div className='flex flex-col h-full border-l-2'>
         {/* Header row with items evenly spaced */}
         <div className='flex items-center justify-around font-semibold'>
           <p>No</p>
@@ -33,6 +37,22 @@ const StepFive = () => {
         <div className='flex-1 flex items-center justify-center p-4'>
           <p>Tape on the Vehicle part to add damage</p>
         </div>
+      </div>
+
+      {/* Navigation buttons */}
+      <div className='flex items-center justify-between mt-8 col-span-2'>
+        <button
+          onClick={handleBack}
+          className='font-semibold text-lg text-[#242E69] rounded-lg px-12 py-1 border-2'
+        >
+          Back
+        </button>
+        <button
+          onClick={handleNext}
+          className='font-medium text-lg text-white bg-[#242E69] rounded-lg px-6 py-1 border-2'
+        >
+          Save and Continue
+        </button>
       </div>
     </div>
   );
