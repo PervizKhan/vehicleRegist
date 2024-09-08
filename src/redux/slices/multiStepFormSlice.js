@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  currentStep: 6,
+  currentStep: 1,
   stepOne: {
     vehicleID: "",
     make: "",
