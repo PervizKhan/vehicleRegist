@@ -21,6 +21,9 @@ const StepSix = () => {
           value: values.additionalNotes,
         })
       );
+      alert(
+        "The all screens data is printed in the console in a single object"
+      );
       console.log(
         "All Forms Data in a Single Object to send to backend",
         allFormsData
@@ -31,7 +34,7 @@ const StepSix = () => {
   return (
     <div className='flex flex-col bg-white px-6 py-6 rounded-lg'>
       <p className='text-lg font-bold mb-4'>Any Additional Notes</p>
-      <form onSubmit={formik.handleSubmit} className='flex-1 bg-[#F9F9F9]'>
+      <form onSubmit={formik.handleSubmit} className='flex-1'>
         <textarea
           name='additionalNotes'
           value={formik.values.additionalNotes}
